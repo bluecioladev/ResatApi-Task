@@ -1,6 +1,7 @@
 //import mongoose from 'mongoose';
 //new mongoose.Schema();
 import { Schema, model } from "mongoose";
+import mongoosePaginate  from "mongoose-paginate-v2";
 
 const taskSchema = new Schema({
     title: {
@@ -22,6 +23,6 @@ const taskSchema = new Schema({
     timestamps: true
 
 });
-
+taskSchema.plugin(mongoosePaginate);
 export default model('Task', taskSchema);
 

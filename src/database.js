@@ -3,10 +3,16 @@ import config from './config'
 
 
 (async () => {
-    const db = await mongoose.connect(config.mongodbURL,{
-        useUnifiedTopology: true ,
+   try{
+    const db = await mongoose.connect(config.mongodbURL, {
+        useUnifiedTopology: true,
         useNewUrlParser: true
+   
     });
-    console.log('DataBase its connected to : ',db.connection.name);
+    console.log('DataBase its connected to : ', db.connection.name);
+ } catch(error){
+    console.error(error);
+ }
+    
 })();
 
