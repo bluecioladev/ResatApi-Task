@@ -1,5 +1,3 @@
-//import mongoose from 'mongoose';
-//new mongoose.Schema();
 import { Schema, model } from "mongoose";
 import mongoosePaginate  from "mongoose-paginate-v2";
 
