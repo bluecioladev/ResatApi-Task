@@ -2,3 +2,7 @@ node_modules
 
 #enviroment variables
 .env
+
+#node
+node_modules
+dist
